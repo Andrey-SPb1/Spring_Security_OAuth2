@@ -1,0 +1,6 @@
+2024-10-05T05:02:50.931+03:00  INFO 3832 --- [http-nio-8080-exec-3] o.j.s.service.SocialAppService           : User created: User(id=2, username=Frost, email=frostiz741@gmail.com, role=USER)
+2024-10-05T05:02:56.218+03:00  INFO 3832 --- [http-nio-8080-exec-5] o.j.s.authentication.OidcClient          : Successfully revoked token
+2024-10-05T05:02:56.219+03:00  INFO 3832 --- [http-nio-8080-exec-5] o.j.s.a.OidcLogoutSuccessHandler         : The user(Frost) has successfully logged out
+2024-10-05T05:03:16.249+03:00  INFO 3832 --- [http-nio-8080-exec-9] o.j.s.service.SocialAppService           : User found: User(id=2, username=Frost, email=frostiz741@gmail.com, role=ADMIN)
+2024-10-05T05:03:22.819+03:00  INFO 3832 --- [http-nio-8080-exec-3] o.j.s.authentication.OidcClient          : Successfully revoked token
+2024-10-05T05:03:22.819+03:00  INFO 3832 --- [http-nio-8080-exec-3] o.j.s.a.OidcLogoutSuccessHandler         : The user(Frost) has successfully logged out

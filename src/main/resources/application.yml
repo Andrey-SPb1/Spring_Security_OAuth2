@@ -1,0 +1,41 @@
+server:
+  port: 8080
+
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 377003718876-ce99v1voago5nm92ikaive3nd8439rq7.apps.googleusercontent.com
+            client-secret: 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
+            scope: profile, email
+        provider:
+          google:
+            authorization-uri: https://accounts.google.com/o/oauth2/auth
+            token-uri: https://oauth2.googleapis.com/token
+            user-info-uri: https://www.googleapis.com/oauth2/v3/userinfo
+            user-name-attribute: sub
+  datasource:
+    url: jdbc:postgresql://localhost:5432/securitydemodb
+    username: postgres
+    password: password
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+        hbm2ddl:
+          auto: validate
+
+logging:
+  level:
+    root: error
+    org.javacode.spring_security_oauth2.authentication.OidcClient: info
+    org.javacode.spring_security_oauth2.service.SocialAppService: info
+    org.javacode.spring_security_oauth2.authentication.OidcLogoutSuccessHandler: info
+  pattern:
+    console: '%d{yyyy-MM-dd HH:mm:ss} - %msg%n'
+  file:
+    name: logs/spring_security_oauth2.log
